@@ -1,20 +1,12 @@
 <div>
     <p>© 1999-2024 Компьютерная Академия IT Step.</p>
     <ul>
-        <li>
-            <a href="https://www.facebook.com/itstep.tashkent" class="footer-new__link footer-new__link--fb">
-                <img src="https://tashkent.itstep.org/dist/images/src/images/academy/footer/f.svg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/itstep.tashkent/" class="footer-new__link footer-new__link--insta">
-                <img src="https://tashkent.itstep.org/dist/images/src/images/academy/footer/ins.svg" alt="">
-            </a>
-        </li>
-        <li>
-            <a href="https://t.me/itstep_tashkent" class="footer-new__link footer-new__link--telega">
-                <img src="https://tashkent.itstep.org/dist/images/src/images/icons/social-links/2.svg" alt="">
-            </a>
-        </li>
+        {% for item in footer %}
+            <li>
+                <a href="{{ item.link }}" class="{{ item.class }}"> 
+                    <img src="{{ item.img }}" alt="">
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 </div>
