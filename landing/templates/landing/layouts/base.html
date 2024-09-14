@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter;
+        }
+        header nav {
+            background: #111217;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            padding-left: 1rem;
+            img {
+                position: absolute;
+                top: 0;
+            }
+            ul {
+                padding-left: 6rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                gap: 2rem;
+                a {
+                    font-size: 11px;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+        footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            div {
+                background: #111217;
+                color: #9097a2;
+                padding: 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    list-style: none;
+                    li {
+                        background-color: rgba(221,224,235,.25);
+                        border-radius: 4px;
+                        width: 24px;
+                        height: 24px;
+                    }
+                    .footer-new__link--telega img {
+                        margin: 4px;
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        {% include 'landing/includes/header.html' %}
+    </header>
+    <main>
+        {% block main %}
+            
+        {% endblock main %}
+    </main>
+    <footer>
+        {% include 'landing/includes/footer.html' %}
+    </footer>
+</body>
+</html>

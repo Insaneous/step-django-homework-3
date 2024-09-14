@@ -1,0 +1,25 @@
+{% extends 'landing/layouts/base.html' %}
+
+{% block main %}
+    <style>
+        main {
+            padding: 10rem 5rem;
+            h1 {
+                font-size: 4rem;
+            }
+            div {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    </style>
+    <h1>Контакты</h1>
+    <div>
+        <img src="https://tashkent.itstep.org/dist/images/src/images/contacts/icons/map-marker.svg" alt="">
+        <p>г. Ташкент, улица Истикбол, 14</p>
+    </div>
+{% endblock main %}
